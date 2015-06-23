@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="callTaxi">Llamar Taxi</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="accept">aceptar</string>
+    <string name="now">Ahora</string>
+    <string name="reserve">Reserva</string>
+    <string name="title_activity_sign_in">SignInActivity</string>
+    <string name="phone">telefono</string>
+    <string name="contact">nombre de contacto</string>
+    <string name="email">email</string>
+    <string name="password">contraseña</string>
+    <string name="SingIn">Registro</string>
+    <string name="choose_city_from">Elije ciudat de origen</string>
+    <string name="choose_city_to">Elije ciudad de destino</string>
+    <string name="title_activity_go">GoActivity</string>
+    <string name="from">desde</string>
+    <string name="place_name">dirección</string>
+    <string name="sit_map">ver mapa</string>
+    <string name="to">hasta</string>
+    <string name="coments">comentarios</string>
+    <string name="n_pass">pas.</string>
+    <string name="date">fecha</string>
+    <string name="in">en</string>
+    <string name="minutes">minutos</string>
+    <string name="save_ok">guardado correctamente</string>
+    <string name="save_no">no se ha guardado, revisa los datos e intentaló de nuevo</string>
+    <string name="hour">hora</string>
+    <string name="city">ciudad</string>
+    <string name="questionTrip">Elije tu trayecto</string>
+    <string name="oneway">IDA</string>
+    <string name="roundtrip">IDA Y VUELTA</string>
+    <string name="next">siguiente</string>
+    <string name="done">hecho</string>
+    <string name="title_activity_maps">Mapa</string>
+    <string name="want_save">¿Quieres guardar esta dirección?</string>
+    <string name="no">NO</string>
+    <string name="yes">SI</string>
+    <string name="title_activity_log_in">LogInActivity</string>
+    <string name="LogIn">Entrar</string>
+    <string name="pass_no">tu correo o contraseña no son correctos</string>
+    <string name="title_activity_back">BackActivity</string>
+    <string name="dir_from">dirección de origen</string>
+    <string name="dir_to">dirección de destino</string>
+    <string name="save_one">Solo ha guardado un trayecto</string>
+    <string name="trip_go">(ida)</string>
+    <string name="trip_back">(vuelta)</string>
+    <string name="error">ERROR!</string>
+    <string name="hour_l">hora:</string>
+    <string name="date_l">fecha:</string>
+    <string name="title_activity_trips">TripsActivity</string>
+    <string name="price_l">precio</string>
+    <string name="kms">kms</string>
+    <string name="insert_time">Introduce la hora de recogida</string>
+    <string name="insert_date">Introduce la fecha de recogida</string>
+    <string name="insert_min">Introduce los minutos de recogida</string>
+    <string name="check_from">tu dirección de origen no es correcta</string>
+    <string name="action_trips_list">Listado de trayectos</string>
+    <string name="go_sign_in">Ir a registro</string>
+    <string name="go_log_in">Ir a entrada</string>
+    <string name="mail_no">Tu dirección de correo no es correcta</string>
+    <string name="search">buscar</string>
+    <string name="to_land">hasta</string>
+    <string name="app_name">Taxi Valldigna</string>
+    <string name="action_settings">Configuración</string>
+    <string name="hello_world">Hola mundo!</string>
+    <string name="hello_blank_fragment">Hola fragmento en blanco</string>
+
+
+</resources>

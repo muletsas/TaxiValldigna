@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/cellStyleopal">
+
+    <LinearLayout
+
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linearDateHour"
+        android:weightSum="1"
+
+        >
+
+        <TextView
+            android:id="@+id/id_trip"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/abc_action_bar_overflow_padding_end_material"
+            android:paddingRight="@dimen/abc_action_bar_overflow_padding_start_material"
+            android:text="N:"
+            android:background="@drawable/ic_go"/>
+
+        <TextView
+            android:id="@+id/date_list"
+
+            android:width="80dp"
+
+            android:textAlignment="center"
+            android:text="@string/date_l"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            />
+        <TextView
+            android:id="@+id/hour_list"
+            android:layout_weight="1.0"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:text="@string/hour_l"
+
+            android:textAlignment="center"
+            />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:id="@+id/kms_list"
+            android:text="@string/kms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+android:paddingRight="@dimen/abc_action_bar_overflow_padding_end_material"
+
+
+            /><TextView
+        android:id="@+id/price_list"
+        android:text="@string/price_l"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/abc_action_bar_overflow_padding_end_material"
+        android:paddingRight="@dimen/abc_action_bar_overflow_padding_start_material"
+
+
+
+        />
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+   >
+                <ImageView
+                    android:id="@+id/image_from"
+                    android:contentDescription="@string/from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_place_from"
+                    android:layout_weight="1"
+android:layout_gravity="center_vertical"
+
+                    />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="3sp"
+                    android:layout_weight="6"
+
+                    >
+
+
+                    <TextView
+                        android:id="@+id/street_from_l"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/abc_text_size_medium_material"
+                        />
+
+                    <TextView
+                        android:id="@+id/city_from_l"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1.0"
+                        android:textSize="@dimen/abc_text_size_medium_material"
+                        android:inputType="none"
+
+                        android:lines="1" />
+
+
+                </LinearLayout>
+</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+
+
+            <ImageView
+                android:id="@+id/image_to"
+                android:contentDescription="@string/to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_place_to"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+
+                />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="6"
+
+                    >
+
+                    <TextView
+                        android:id="@+id/street_to_l"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="gravity"
+
+                        android:lines="1"
+                        android:textSize="@dimen/abc_text_size_medium_material"/>
+
+                    <TextView
+                        android:id="@+id/city_to_l"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="gravity"
+
+                        android:textSize="@dimen/abc_text_size_medium_material"
+                    />
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

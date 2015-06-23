@@ -1,0 +1,214 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="enguix.mulet.taxivalldigna.Views.GoActivity"
+    android:background="@drawable/go_bg">
+
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:id="@+id/timerLayout"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        tools:context=".GoActivity"
+        android:weightSum="1"
+        />
+
+
+
+
+    <LinearLayout
+
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayoutMain"
+        android:orientation="vertical"
+        android:layout_below="@id/timerLayout"
+        android:weightSum="7"
+
+        >
+
+
+
+        <ScrollView android:id="@+id/reserve_form" android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3.0">
+
+            <LinearLayout
+                android:paddingTop="10dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/liniarReserve"
+
+                >
+
+
+
+                <TextView
+                    android:id="@+id/text_from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/from"
+                    android:textSize="@dimen/abc_text_size_medium_material"
+                    android:textColor="@color/black"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+
+                    />
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:padding="3sp" >
+
+
+                    <EditText
+                        android:id="@+id/address_from"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1.0"
+                        android:hint="@string/place_name"
+                        android:inputType="text"
+                        android:lines="1"
+                        style="@style/EditTextBlack"
+
+
+                        />
+
+                    <Spinner
+                        android:id="@+id/city_from"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1.0"
+
+                        android:inputType="none"
+
+                        style="@style/EditTextBlack"
+                        />
+
+                    <!--
+                     android:hint="@string/city"
+                    android:lines="1"
+
+                    -->
+
+
+                    <Button android:id="@+id/Btnmap_from"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/sit_map"
+                        android:drawableLeft="@drawable/ic_sit_mmapp"
+                        style="@style/btnStyleBlacktaxi"
+
+
+
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/text_to"
+                    android:text="@string/to"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/abc_text_size_medium_material"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:textColor="@color/black"
+                    />
+
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:padding="3sp" >
+
+                    <EditText
+                        android:id="@+id/address_to"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1.0"
+                        android:hint="@string/place_name"
+                        android:inputType="text"
+                        style="@style/EditTextBlack"
+                        android:lines="1" />
+
+                    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:tools="http://schemas.android.com/tools" android:id="@+id/container"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        tools:context=".GoActivity"
+                        android:layout_weight="1.0"
+                        />
+
+
+                    <Button
+                        android:id="@+id/Btnmap_to"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/sit_map"
+
+                        android:drawableLeft="@drawable/ic_sit_mmapp"
+                        style="@style/btnStyleBlacktaxi"
+
+                        />
+
+                </LinearLayout>
+                <EditText
+                    android:id="@+id/coments"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="start"
+                    android:layout_weight="1.0"
+                    android:hint="@string/coments"
+                    android:inputType="textMultiLine"
+                    style="@style/EditTextBlack"
+                    android:lines="2"
+                    />
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    >
+
+                    <Button
+                        android:id="@+id/btn_ok"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/accept"
+                        style="@style/btnStyleBlacktaxi"/>
+
+                    <EditText
+                        android:id="@+id/n_pas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/n_pass"
+                        android:textSize="@dimen/abc_text_size_large_material"
+
+
+                        android:inputType="number"
+                        style="@style/EditTextBlack"
+
+                        android:lines="1" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

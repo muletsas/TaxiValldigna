@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+        <string name="callTaxi">Trucar Taxi</string>
+
+        <!-- TODO: Remove or change this placeholder text -->
+        <string name="accept">accepta</string>
+        <string name="now">Ara</string>
+        <string name="reserve">Reserva</string>
+        <string name="title_activity_sign_in">SignInActivity</string>
+        <string name="phone">telèfon</string>
+        <string name="contact">nom de contacte</string>
+        <string name="email">email</string>
+        <string name="password">contrasenya</string>
+        <string name="SingIn">Registre</string>
+        <string name="choose_city_from">Tria ciutat d\'origen</string>
+        <string name="choose_city_to">Tria ciutat d\'arribada</string>
+        <string name="title_activity_go">GoActivity</string>
+        <string name="from">des de</string>
+        <string name="place_name">adreça</string>
+        <string name="sit_map">veure mapa</string>
+        <string name="to">fins a</string>
+        <string name="coments">comentaris</string>
+        <string name="n_pass">pass.</string>
+        <string name="date">data</string>
+        <string name="in">en</string>
+        <string name="minutes">minuts</string>
+        <string name="save_ok">desat correctament</string>
+        <string name="save_no">no s\'ha desat, revisa les dades i intenta-ho de nou</string>
+        <string name="hour">hora</string>
+        <string name="city">ciutat</string>
+        <string name="questionTrip">Tria el teu trajecte</string>
+        <string name="oneway">ANADA</string>
+        <string name="roundtrip">ANADA I TORNADA</string>
+        <string name="next">sigüent</string>
+        <string name="done">fet</string>
+        <string name="title_activity_maps">Mapa</string>
+        <string name="want_save">Vols desar aquesta adreça?</string>
+        <string name="no">NO</string>
+        <string name="yes">SI</string>
+        <string name="title_activity_log_in">LogInActivity</string>
+        <string name="LogIn">Entra</string>
+        <string name="pass_no">el teu correu o contrasenya no són correctes</string>
+        <string name="title_activity_back">BackActivity</string>
+        <string name="dir_from">adreça d\'origen</string>
+        <string name="dir_to">adreça destinació</string>
+        <string name="save_one">Només ha guardat un trajecte</string>
+        <string name="trip_go">(anada)</string>
+        <string name="trip_back">(tornada)</string>
+        <string name="error">ERROR!</string>
+        <string name="hour_l">hora:</string>
+        <string name="date_l">data:</string>
+        <string name="title_activity_trips">TripsActivity</string>
+        <string name="price_l">preu</string>
+        <string name="kms">kms</string>
+        <string name="insert_time">Introdueix l\'hora de recollida</string>
+        <string name="insert_date">Introudeix la data de recollida</string>
+        <string name="insert_min">Introdueix els minuts de recollida</string>
+        <string name="check_from">la teua adreça d\'origen no es correcta</string>
+        <string name="action_trips_list">Llistat de trajectes</string>
+        <string name="go_sign_in">Anar a registre</string>
+        <string name="go_log_in">Anar a entrada</string>
+        <string name="mail_no">El teu correu electònic no és correcte</string>
+        <string name="search">cerca</string>
+        <string name="to_land">fins a</string>
+
+
+
+
+
+    </resources>
+

@@ -1,0 +1,7 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="enguix.mulet.taxivalldigna.Views.LogInActivity">
+    <item android:id="@+id/action_new_user" android:title="@string/go_sign_in"
+        android:orderInCategory="100" app:showAsAction="never" />
+</menu>

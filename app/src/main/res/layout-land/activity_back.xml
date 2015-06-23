@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/back_bbg">
+    <LinearLayout
+
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linearDateHour"
+        android:weightSum="1"
+        android:background="@color/black">
+
+        <TextView
+            android:text="@string/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/yellowTaxi"
+            android:textSize="@dimen/abc_text_size_medium_material"
+
+            />
+        <TextView
+            android:id="@+id/date_back"
+
+            android:text=" 00-00-0000 "
+
+            android:background="@drawable/groc_negre_"
+            android:textAlignment="center"
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:text="@string/hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/yellowTaxi"
+            android:textSize="@dimen/abc_text_size_medium_material"
+
+            />
+        <TextView
+            android:id="@+id/hour_back"
+            android:layout_weight="1.0"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text=" --:-- "
+            android:background="@drawable/groc_negre_"
+            android:textAlignment="center"
+            />
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayoutMain"
+        android:orientation="vertical"
+        android:layout_below="@id/linearDateHour"
+        android:weightSum="7"
+
+        >
+
+
+
+        <ScrollView android:id="@+id/reserve_form" android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3.0">
+
+            <LinearLayout
+                android:paddingTop="10dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/liniarReserve"
+
+                >
+
+
+
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:padding="3sp" >
+                    <TextView
+                        android:id="@+id/text_from"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/from"
+                        android:textSize="@dimen/abc_text_size_medium_material"
+                        android:textColor="@color/black"
+                        android:paddingLeft="@dimen/activity_horizontal_margin"
+                        android:paddingRight="@dimen/activity_horizontal_margin"/>
+
+                    <EditText
+                        android:id="@+id/address_from"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1.0"
+                        android:hint="@string/place_name"
+                        android:inputType="text"
+                        android:lines="1"
+                        style="@style/EditTextBlack"
+
+
+                        />
+                    <EditText
+                        android:id="@+id/city_from"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1.0"
+
+                        android:inputType="none"
+                        style="@style/EditTextBlack"
+                        android:lines="1" />
+
+
+                    <Button android:id="@+id/Btnmap_from"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/sit_map"
+                        android:drawableLeft="@drawable/ic_sit_mmapp"
+                        style="@style/btnStyleBlacktaxi"
+
+
+                        android:onClick="goMapFrom"
+                        />
+
+                </LinearLayout>
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:padding="3sp" >
+                    <TextView
+                        android:id="@+id/text_to"
+                        android:text="@string/to_land"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/abc_text_size_medium_material"
+                        android:paddingLeft="@dimen/activity_horizontal_margin"
+                        android:paddingRight="@dimen/activity_horizontal_margin"
+                        android:textColor="@color/black"
+                        />
+
+                    <EditText
+                        android:id="@+id/address_to"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1.0"
+                        android:hint="@string/place_name"
+                        android:inputType="text"
+                        style="@style/EditTextBlack"
+                        android:lines="1" />
+                    <EditText
+                        android:id="@+id/city_to"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1.0"
+
+                        android:inputType="none"
+                        style="@style/EditTextBlack"
+                        android:lines="1" />
+
+                    <Button
+                        android:id="@+id/Btnmap_to"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/sit_map"
+
+                        android:drawableLeft="@drawable/ic_sit_mmapp"
+                        style="@style/btnStyleBlacktaxi"
+                        android:onClick="goMapTo"
+                        />
+
+                </LinearLayout>
+
+
+                <EditText
+                    android:id="@+id/coments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="2.0"
+                    android:hint="@string/coments"
+                    android:inputType="textMultiLine"
+                    style="@style/EditTextBlack"
+                    android:textColor="#ffffff"
+                    android:lines="1"/>
+
+                <Button
+                    android:id="@+id/submit_trip"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/accept"
+                    style="@style/btnStyleBlacktaxi"/>
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

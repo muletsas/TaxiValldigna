@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="enguix.mulet.taxivalldigna.Views.SignInActivity"
+    android:background="@drawable/sign_in_background">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="10dp"
+        android:background="@drawable/linearlayout_bg"
+        >
+
+
+        <EditText
+            android:id="@+id/etMail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_top_bg"
+            android:inputType="textEmailAddress"
+            android:hint="@string/email"
+            android:textColorHint="#cccccc"
+            android:drawableLeft="@drawable/email"/>
+        <EditText
+            android:id="@+id/etUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_default_bg"
+            android:layout_marginTop="-2dp"
+            android:inputType="textPersonName"
+            android:hint="@string/contact"
+            android:textColorHint="#bbbbbb"
+            android:drawableLeft="@drawable/user"/>
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_default_bg"
+            android:layout_marginTop="-2dp"
+            android:padding="2dp"
+            android:hint="@string/phone"
+            android:textColorHint="#bbbbbb"
+            android:inputType="phone"
+            android:drawableLeft="@drawable/phone"/>
+        <EditText
+            android:id="@+id/etPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_bottom_bg"
+            android:layout_marginTop="-2dp"
+
+            android:hint="@string/password"
+            android:textColorHint="#cccccc"
+
+            android:inputType="textPassword"
+            android:drawableLeft="@drawable/password"/>
+        <Button
+            android:id="@+id/btnSingIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_margin="4dp"
+            android:text="@string/SingIn"
+            style="@style/btnStyleTaxi"
+
+            />
+    </LinearLayout>
+
+</RelativeLayout>

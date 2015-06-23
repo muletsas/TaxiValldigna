@@ -1,0 +1,71 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="enguix.mulet.taxivalldigna.Views.NowTimeFragment">
+
+
+    <LinearLayout
+
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linearMinutes"
+        android:weightSum="1"
+        android:background="@color/black">
+        <TextView
+            android:text="@string/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/yellowTaxi"
+            android:textSize="@dimen/abc_text_size_medium_material"
+
+            />
+        <TextView
+            android:id="@+id/date_now"
+
+
+            android:background="@drawable/groc_negre_"
+            android:textAlignment="center"
+            android:textSize="@dimen/abc_text_size_medium_material"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text=" 00-00-0000 "
+            />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:text="@string/in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/yellowTaxi"
+            android:textSize="@dimen/abc_text_size_medium_material"
+
+            />
+        <TextView
+            android:id="@+id/min_now"
+            android:layout_weight="1.0"
+            android:textSize="@dimen/abc_text_size_medium_material"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text=" --- "
+            android:background="@drawable/groc_negre_"
+            android:textAlignment="center"
+
+            />
+        <TextView
+            android:text="@string/minutes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/yellowTaxi"
+            android:textSize="@dimen/abc_text_size_medium_material"
+
+            />
+
+
+    </LinearLayout>
+</FrameLayout>
