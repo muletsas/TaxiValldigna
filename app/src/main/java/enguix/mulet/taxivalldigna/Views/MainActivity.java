@@ -33,13 +33,13 @@ public class MainActivity extends AppCompatActivity implements ReserveNowFragmen
 public static final String PROPERTY_REG_DB= "DataBase";
     public static final String TAG_TIME="times";
     public static final String TAG_GO_BACK ="go_back";
-    ArrayList<CityEntity> cities;
-    Button call;
-    boolean newuser;//a true va a registre usuari, a false va a validar usuari
-    String user;
-    String pass;
+    private ArrayList<CityEntity> cities;
+    private Button call;
+    private boolean newuser;//a true va a registre usuari, a false va a validar usuari
+    private String user;
+    private String pass;
     private Toolbar toolbar;
-    Intent intent;
+    private Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

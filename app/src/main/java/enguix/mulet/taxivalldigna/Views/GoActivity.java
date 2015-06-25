@@ -41,23 +41,24 @@ public class GoActivity extends AppCompatActivity implements View.OnClickListene
         ReserveTimeFragment.OnFragmentInteractionListener, NowTimeFragment.OnFragmentInteractionListener ,
         UtilsRequest.ListenerRequest, UtilsRequest.AddressResponse {
 
-    public static final String BEACH = "Platja ";
+
     public static final String ACC_FROM = "from";
     public static final String ACC_TO = "to";
     public static final String KEY_MAP = "map";
-public static final String FROM_ACTIVITY ="Activity";
+    public static final String FROM_ACTIVITY ="Activity";
     public static final int CLICK_FROM = 1;
     public static final int CLICK_TO = 2;
 
     public static final String GO_ACT = "GoActivity";
 
-    private boolean ok;
-    private boolean from_ok;
-    private boolean to_ok;
-
     public static final String VALUE_FROM = "address_from";
     public static final String VALUE_TO = "address_to";
     public static final String KEY_CAMERA = "camera";
+
+    private boolean from_ok;
+    private boolean to_ok;
+
+
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
 
@@ -70,26 +71,26 @@ public static final String FROM_ACTIVITY ="Activity";
     private boolean times;//true = now false= reserve
     private int go_back;// 1 = simple 2 = go_back
 
-    EditText street_from;
-    int id_city_from;
-    Spinner city_from;
+    private EditText street_from;
+    private int id_city_from;
+    private Spinner city_from;
 
-    EditText street_to;
-    String city_to;
+    private EditText street_to;
+    private String city_to;
 
-    EditText coments;
-    EditText passengers;
+    private EditText coments;
+    private EditText passengers;
 
-    ArrayAdapter<String> dataAdapter;
-    ArrayList<CityEntity>cities_from;
-    ArrayList<String> name_cities;
+    private ArrayAdapter<String> dataAdapter;
+    private ArrayList<CityEntity>cities_from;
+    private ArrayList<String> name_cities;
 
-    ArrayList<String> cities_to;
-    Button submit;
-    Button map_from;
-    Button map_to;
+    private ArrayList<String> cities_to;
+    private Button submit;
+    private Button map_from;
+    private Button map_to;
 
-    TripEntity trip;
+    private TripEntity trip;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -101,7 +102,7 @@ public static final String FROM_ACTIVITY ="Activity";
 
 
         from_ok = false;
-        ok = false;
+
         to_ok = false;
 
         times = extra.getBoolean(MainActivity.TAG_TIME);

@@ -19,14 +19,7 @@ public class UserEntity {
     public UserEntity() {
     }
 
-    public UserEntity(String user, String contact_name, String phone, String password) {
-        this.user = user;
-        this.contact_name = contact_name;
-        this.phone = phone;
-        this.password = password;
 
-
-    }
 
     public UserEntity(String user, String password) {
         this.user = user;
@@ -86,8 +79,5 @@ public class UserEntity {
         this.code_gcm = code_gcm;
     }
 
-    /*params.put("user", mail);
-        params.put("contact_name", name);
-        params.put("phone", phone);
-        params.put("password", pass);*/
+
 }

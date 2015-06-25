@@ -22,18 +22,17 @@ import enguix.mulet.taxivalldigna.R;
  * create an instance of this fragment.
  */
 public class NowTimeFragment extends Fragment implements View.OnClickListener {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+
     private static final String ARG_DATE = "date";
-    private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
-    private String mParam;
-    private String mParam2;
 
-    TextView date;
-    TextView minutes;
-    private int min_;
+
+    private String dateString;
+
+
+    private TextView date;
+    private TextView minutes;
+
     private OnFragmentInteractionListener mListener;
 
     /**
@@ -61,7 +60,7 @@ public class NowTimeFragment extends Fragment implements View.OnClickListener {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam = getArguments().getString(ARG_DATE);
+            dateString = getArguments().getString(ARG_DATE);
 
         }
     }
@@ -76,7 +75,7 @@ public class NowTimeFragment extends Fragment implements View.OnClickListener {
         date = (TextView)rootView.findViewById(R.id.date_now);
         minutes = (TextView)rootView.findViewById(R.id.min_now);
 
-        date.setText("  "+mParam+"  ");
+        date.setText("  "+dateString+"  ");
         minutes.setOnClickListener(this);
 
         return rootView;
@@ -131,9 +130,7 @@ try{
         // TODO Auto-generated method stub
         super.onSaveInstanceState(outState);
 
-        // Guardamos el estado de la posicion del elemento
-        // que estábamos consultando
-        //outState.putInt(POSICION, position);
+
     }
 
 

@@ -35,8 +35,8 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
     private EditText textPass;
     private Button submit;
 
-    SharedPreferences prefs_user;
-    String lastUser;
+    private SharedPreferences prefs_user;
+    private String lastUser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

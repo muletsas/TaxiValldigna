@@ -42,7 +42,7 @@ public class GCMIntentService extends IntentService {
         super("GcmIntentService");
         nnoti=0;
     }
-    public static final String TAG = "GCM Demo";
+    public static final String TAG = "GCM";
 
     @Override
     protected void onHandleIntent(Intent intent) {

@@ -32,7 +32,7 @@ public class TaxiDataBase {
     private Context context;
     private SQLiteDatabase db;
     private TaxiOpenHelper dbHelper;
-private String userTable;
+    private String userTable;
 
 
     public TaxiDataBase(Context context) {
@@ -156,45 +156,7 @@ private String userTable;
 
         Cursor c = db.rawQuery(query, null);
 
- /*       String[] get_values = { //TaxiContract.UserTrips.COLUMN_NAME_ID,
-                TaxiContract.UserTrips.COLUMN_NAME_ID,
-                TaxiContract.UserTrips.COLUMN_NAME_DATE,
-                TaxiContract.UserTrips.COLUMN_NAME_STREET_FROM,
-                TaxiContract.UserTrips.COLUMN_NAME_CITY_FROM,
-                TaxiContract.UserTrips.COLUMN_NAME_LAT_FROM,
-                TaxiContract.UserTrips.COLUMN_NAME_LNG_FROM,
-                TaxiContract.UserTrips.COLUMN_NAME_STREET_TO,
-                TaxiContract.UserTrips.COLUMN_NAME_CITY_TO,
-                TaxiContract.UserTrips.COLUMN_NAME_LAT_TO,
-                TaxiContract.UserTrips.COLUMN_NAME_LNG_TO,
-                TaxiContract.UserTrips.COLUMN_NAME_COMENTS,
-        };
-        Cursor c = db.query(this.userTable+"_"+TaxiContract.UserTrips.TABLE_NAME,
-                get_values,
-                null,
-                null, null, null, null, null);
 
-                 public static final String COLUMN_NAME_ID = "id_trip";1
-
-        public static final String COLUMN_NAME_DATE = "date";2
-
-        public static final String COLUMN_NAME_STREET_FROM = "street_from";3
-        public static final String COLUMN_NAME_CITY_FROM = "city_from";4
-        public static final String COLUMN_NAME_LAT_FROM = "lat_from";5
-        public static final String COLUMN_NAME_LNG_FROM = "lng_from";6
-        public static final String COLUMN_NAME_STREET_TO = "street_to";7
-        public static final String COLUMN_NAME_CITY_TO = "city_to";8
-        public static final String COLUMN_NAME_LAT_TO = "lat_to";9
-        public static final String COLUMN_NAME_LNG_TO = "lng_to";10
-        public static final String COLUMN_NAME_COMENTS = "coments";11
-        public static final String COLUMN_NAME_KMS = "kms";12
-        public static final String COLUMN_NAME_PRICE = "price";13
-
-
-
-
-
-                */
         if(c != null) {
             c.moveToFirst();
 
@@ -348,33 +310,7 @@ ArrayList<TripEntity> trips = new ArrayList<>();
         return id;
     }
 
-    public boolean modificarMarca(int id, String nom, String tipus, String comentari, double lat, double lon){
 
-        boolean correcte=false;
-
-        db = dbHelper.getWritableDatabase();
-
-        ContentValues valors = new ContentValues();
-        valors.put("tipus",tipus);
-        valors.put("nom", nom);
-        valors.put("comentari", comentari);
-        valors.put("lon", lon);
-        valors.put("lat", lat);
-        int a=db.update("Markers", valors, "_id=" + id, null);
-        if(a==1){
-            correcte=true;
-        }
-        db.close();
-        return correcte;
-    }
-
-    public void borrarMarca(int id) {
-
-
-        db = dbHelper.getWritableDatabase();
-        db.delete("Markers", "_id=" + id, null);
-        db.close();
-    }
 
     public CityEntity getCity(int id) {
         CityEntity city=null;
@@ -488,73 +424,5 @@ ArrayList<CityEntity>cities=new ArrayList<>();
     }
 
 
-/*
-
-    public Marca recuperarMarca(Marker marc) {
-
-        Marca marker=null;
-
-
-        db = dbHelper.getReadableDatabase();
-        // String[] valores_recuperar = {"_id", "nom", "tipus", "comentari", "lat", "lon"};
-        //Cursor c = db.query("Markers", valores_recuperar, "lat=" + marc.getPosition().latitude,//+" AND lon="+marc.getPosition().longitude,
-        //   null, null, null, null, null);
-
-        Cursor c =  db.rawQuery("select * from Markers", null);// where lat="+marc.getPosition().latitude, null );
-        if(c != null) {
-            c.moveToFirst();
-            marker = new Marca(c.getInt(1), c.getString(2), c.getString(3),
-                    c.getString(4), c.getDouble(5), c.getDouble(6));
-
-        }
-        Log.v("comença a arreplegar","comensem");
-        int i=0;
-        while(c.isAfterLast() == false){
-            //    marker = new Marca(c.getInt(0), c.getString(1), c.getString(2),
-            //           c.getString(3), c.getDouble(4), c.getDouble(5));
-            i++;
-            //Log.v("marquer "+i,marker.toString());
-
-            //if(marc.getTitle().equals(marker.getNom()+": "+marker.getTipus())){
-            //  break;
-            //}
-
-            c.moveToNext();
-        }
-
-        db.close();
-        c.close();
-        return marker;
-    }
-
-    public Marca donamMarca(Marker marker){
-        ArrayList<Marca> markes = obtenirMarques();
-
-        for(Marca marc : markes){
-            if(marker.getTitle().equals(marc.getNom()+": "+marc.getTipus())){
-                return marc;
-            }
-        }
-        return null;
-    }
-
-    public ArrayList<Marca> obtenirMarques(){
-        ArrayList<Marca> marques = new ArrayList<>();
-
-        db = dbHelper.getReadableDatabase();
-
-        String[] valores_recuperar = {"_id", "nom", "tipus", "comentari", "lat", "lon"};
-        Cursor c = db.query("Markers", valores_recuperar,null,
-                null, null, null, null, null);
-        c.moveToFirst();
-        do {
-
-        } while (c.moveToNext());
-        db.close();
-        c.close();
-
-        return marques;
-    }
-*/
 
 }

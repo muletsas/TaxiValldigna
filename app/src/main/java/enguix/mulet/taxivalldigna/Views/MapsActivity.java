@@ -29,7 +29,7 @@ import enguix.mulet.taxivalldigna.R;
 import enguix.mulet.taxivalldigna.UtilsRequest;
 
 public class MapsActivity extends FragmentActivity implements UtilsRequest.ListenerRequest, View.OnClickListener {
-    public static final String ACTION_MAP = "putAddress";
+
     public static final LatLng COORDENATES_DEFAULT = new LatLng(39.0733815,-0.2643516);
     public static final String TAG_SEARCH = "search";
     public static final String TAG_CLICK = "longClick";
@@ -39,8 +39,8 @@ public class MapsActivity extends FragmentActivity implements UtilsRequest.Liste
     private CustomAddress addres_to;
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
 
-    Button search;
-    EditText text;
+    private Button search;
+    private EditText text;
     private String action;
     private String activity;
 
@@ -235,8 +235,8 @@ public class MapsActivity extends FragmentActivity implements UtilsRequest.Liste
                                     addres_to = currentLocation;
 
                                     mMap.addMarker(new MarkerOptions()
-                                                    .position(addres_from.getCoordenates())
-                                                    .title(getString(R.string.dir_from))
+                                                    .position(addres_to.getCoordenates())
+                                                    .title(getString(R.string.dir_to))
                                                     .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE))
                                                     .snippet(currentLocation.toString())
                                     );
@@ -252,6 +252,9 @@ public class MapsActivity extends FragmentActivity implements UtilsRequest.Liste
                                     // setResult(2, back);
                                     // finish();
                                 }
+
+
+                                //fer thread per a que ixca al segon
 
                             }
                         });

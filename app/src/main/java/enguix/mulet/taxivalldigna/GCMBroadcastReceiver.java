@@ -8,7 +8,7 @@ import android.content.Intent;
 import android.support.v4.content.WakefulBroadcastReceiver;
 
 /**
- * Created by Raul on 23/03/2015.
+ * Created by Mulet on 23/03/2015.
  */
 public class GCMBroadcastReceiver extends WakefulBroadcastReceiver
 {

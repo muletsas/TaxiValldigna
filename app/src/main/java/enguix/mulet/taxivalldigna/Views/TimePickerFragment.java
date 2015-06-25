@@ -18,11 +18,11 @@ import enguix.mulet.taxivalldigna.Entities.TripEntity;
  * Created by root on 11/06/15.
  */
 public class TimePickerFragment extends DialogFragment implements TimePickerDialog.OnTimeSetListener {
-    TripEntity trip;
+    private TripEntity trip;
     //Times activity;
-    TextView hora;
-    int minute;
-    int hour;
+    private TextView hora;
+    private int minute;
+    private int hour;
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         // Use the current time as the default values for the picker

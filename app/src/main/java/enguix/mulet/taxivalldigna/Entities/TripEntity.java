@@ -64,13 +64,7 @@ public class TripEntity implements Parcelable {
         this.time = convertDate(date);
     }
 
-    public TripEntity(int _id,  CustomAddress to, CustomAddress from,String coments,String dateJson) {
-        this._id = _id;
-        this.coments = coments;
-        this.to = to;
-        this.from = from;
-        this.time = convertDate(dateJson);
-    }
+
 
 
 
@@ -234,8 +228,7 @@ public class TripEntity implements Parcelable {
         params.put(UtilsRequest.PARAMS_COMENTS, this.getComents());
         params.put(UtilsRequest.PARAMS_PASSENGERS, ""+this.getPassengers());
         params.put(UtilsRequest.PARAMS_TIME,dataSQL());
-        // params.put(UtilsRequest.PARAMS_DATE,this.getDate().toString());
-        // params.put(UtilsRequest.PARAMS_HOUR, this.getHour());
+
 
 
     }
@@ -257,8 +250,6 @@ public class TripEntity implements Parcelable {
         params.put(type+"_"+UtilsRequest.PARAMS_COMENTS, this.getComents());
         params.put(type+"_"+UtilsRequest.PARAMS_PASSENGERS, ""+this.getPassengers());
         params.put(type+"_"+UtilsRequest.PARAMS_TIME,dataSQL());
-//        params.put(type+"_"+UtilsRequest.PARAMS_DATE,this.getDate().toString());
-  //      params.put(type+"_"+UtilsRequest.PARAMS_HOUR, this.getHour());
 
 
     }

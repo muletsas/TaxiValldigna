@@ -21,12 +21,11 @@ import enguix.mulet.taxivalldigna.R;
  * create an instance of this fragment.
  */
 public class TextFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+
     private static final String ARG_CITY = "city_to";
 
 
-    // TODO: Rename and change types of parameters
+
     private String mParam1;
 
     private OnFragmentInteractionListener mListener;
@@ -39,7 +38,7 @@ public class TextFragment extends Fragment {
      * @param param1 Parameter 1.
      * @return A new instance of fragment TextFragment.
      */
-    // TODO: Rename and change types and number of parameters
+
     public static TextFragment newInstance(String param1) {
         TextFragment fragment = new TextFragment();
         Bundle args = new Bundle();

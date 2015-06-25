@@ -33,7 +33,7 @@ public final class TaxiContract {
         public static final String COLUMN_NAME_ID = "id_trip";
 
         public static final String COLUMN_NAME_DATE = "date";
-        public static final String COLUMN_NAME_HOUR = "hour";
+
         public static final String COLUMN_NAME_STREET_FROM = "street_from";
         public static final String COLUMN_NAME_CITY_FROM = "city_from";
         public static final String COLUMN_NAME_LAT_FROM = "lat_from";

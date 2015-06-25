@@ -38,16 +38,7 @@ public class CustomAddress implements Parcelable {
         this.c_p = "#";
     }
 
-    public CustomAddress(String streets_name, int id_city, LatLng coordenates) {
-        this.streets_name = streets_name;
-        this.id_city = id_city;
-        this.coordenates = coordenates;
-    }
 
-    public CustomAddress(int id_city, String city) {
-        this.city = city;
-        this.id_city = id_city;
-    }
 
 public boolean checkDirection(String stt, String cty){
 
@@ -66,9 +57,7 @@ public boolean checkDirection(String stt, String cty){
 }
 
 
-    public CustomAddress(LatLng coordenates) {
-        this.coordenates = coordenates;
-    }
+
 
     public String getStreets_name() {
         return streets_name;

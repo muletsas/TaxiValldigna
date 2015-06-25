@@ -83,13 +83,10 @@ private ArrayList<TripEntity> trips;
 
             TaxiDataBase db = new TaxiDataBase(getActivity());
             trips = db.getAllTrips();
-        // TODO: Change Adapter to display your content
+
 
         mAdapter = new AdapterList(getActivity(),trips);
-                /*new ArrayAdapter<>(getActivity(),
-                                    R.layout.item_list,
-                                    android.R.id.text1,
-                                    trips);*/
+
 
 
 

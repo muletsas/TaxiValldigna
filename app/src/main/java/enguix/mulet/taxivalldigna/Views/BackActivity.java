@@ -31,23 +31,23 @@ import enguix.mulet.taxivalldigna.UtilsRequest;
 
 public class BackActivity extends AppCompatActivity implements View.OnClickListener, UtilsRequest.ListenerRequest {
     public static final String BACK_ACT = "BackActivity";
-    TripEntity trip_go;
-    TripEntity trip;
+    private TripEntity trip_go;
+    private TripEntity trip;
 
-    EditText street_from;
-    EditText city_from;
-    EditText street_to;
-    EditText city_to;
+    private EditText street_from;
+    private EditText city_from;
+    private EditText street_to;
+    private EditText city_to;
 
-    EditText coments;
+    private EditText coments;
 
-    TextView hour;
-    TextView date;
+    private TextView hour;
+    private TextView date;
 
 
-    Button submit;
-    Button map_from;
-    Button map_to;
+    private Button submit;
+    private Button map_from;
+    private Button map_to;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

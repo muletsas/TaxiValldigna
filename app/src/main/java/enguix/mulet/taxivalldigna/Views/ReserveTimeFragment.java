@@ -24,8 +24,8 @@ import enguix.mulet.taxivalldigna.R;
  * create an instance of this fragment.
  */
 public class ReserveTimeFragment extends Fragment implements View.OnClickListener{
-    TextView date;
-    TextView hour;
+    private TextView date;
+    private TextView hour;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -123,19 +123,7 @@ public class ReserveTimeFragment extends Fragment implements View.OnClickListene
 
 
 
-    public Calendar getTime(){
 
-        Calendar time = GregorianCalendar.getInstance();
-
-
-        return null;
-    }
-
-    public void setDate(Calendar calendar){
-
-        String d = date.getText().toString();
-
-    }
 
     /**
      * This interface must be implemented by activities that contain this

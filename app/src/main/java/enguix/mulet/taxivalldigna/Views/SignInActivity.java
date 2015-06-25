@@ -36,19 +36,19 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
     public static final String PROPERTY_REG_USER = "user";
     public static final String PROPERTY_REG_PASSWORD = "password";
     private static final int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
-    String SENDER_ID = "770418799048";
+    private String SENDER_ID = "770418799048";
 
     private boolean times;
     private int go_back;
 
-    EditText mail;
-    EditText name;
-    EditText phone;
-    EditText password;
-    Button submit;
-    UserEntity user;
+    private EditText mail;
+    private EditText name;
+    private EditText phone;
+    private EditText password;
+    private Button submit;
+    private UserEntity user;
 
-    GoogleCloudMessaging gcm;
+    private GoogleCloudMessaging gcm;
 
     String regid;
     @Override
@@ -107,7 +107,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
 
 
     public void registerNotifications(){
-        Context context = getApplicationContext();
+
 
         //Chequemos si está instalado Google Play Services
         if(checkPlayServices())
@@ -115,11 +115,11 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
             gcm = GoogleCloudMessaging.getInstance(SignInActivity.this);
 
             //Obtenemos el Registration ID guardado
-            regid = getRegistrationId(context);
+            regid = getRegistrationId();
 
             //Si no disponemos de Registration ID comenzamos el registro
             if (regid.equals("") || regid.isEmpty()) {
-                TareaRegistroGCM tarea = new TareaRegistroGCM();
+                RegisterTaskGCM tarea = new RegisterTaskGCM();
                tarea.execute("");
                 Toast.makeText(getApplicationContext(), "Executa registre", Toast.LENGTH_LONG).show();
             }
@@ -149,7 +149,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
         return true;
     }
 
-    private String getRegistrationId(Context context) {
+    private String getRegistrationId() {
         SharedPreferences prefs = getSharedPreferences(
                 MainActivity.class.getSimpleName(),
                 Context.MODE_PRIVATE);
@@ -230,7 +230,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
 
     }
 
-    private class TareaRegistroGCM extends AsyncTask<String,Integer,String> {
+    private class RegisterTaskGCM extends AsyncTask<String,Integer,String> {
 
 
 
@@ -249,7 +249,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
 
                 Log.d("GCM MEssaging", "Registrado en GCM: registration_id=" + regid);
                 //  Toast.makeText(getApplicationContext(),"Registrado en GCM: registration_id=" + regid,Toast.LENGTH_LONG).show();
-                setRegistrationId(getApplicationContext(), params[0], regid);
+                setRegistrationId(regid);
 
             } catch (IOException ex) {
                 Log.d("RegistreGCM", "Error registro en GCM:" + ex.getMessage());
@@ -266,7 +266,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
         }
 
 
-        private void setRegistrationId(Context context, String user, String regId) {
+        private void setRegistrationId(String regId) {
             SharedPreferences prefs = getSharedPreferences(
                     MainActivity.class.getSimpleName(),
                     Context.MODE_PRIVATE);

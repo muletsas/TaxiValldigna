@@ -13,16 +13,16 @@ import java.util.GregorianCalendar;
 import enguix.mulet.taxivalldigna.Entities.TripEntity;
 
 /**
- * Created by root on 11/06/15.
+ * Created by Mulet on 11/06/15.
  */
 public class DatePickerFragment extends DialogFragment
         implements DatePickerDialog.OnDateSetListener {
-    int year;
-    int month;
-    int day;
+    private int year;
+    private int month;
+    private int day;
 
-    TextView data;
-    TripEntity trip;
+    private TextView data;
+    private TripEntity trip;
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         // Use the current date as the default date in the picker

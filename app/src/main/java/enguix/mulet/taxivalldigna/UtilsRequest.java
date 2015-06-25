@@ -34,7 +34,7 @@ import enguix.mulet.taxivalldigna.Views.MapsActivity;
 
 
 /**
- * Created by root on 17/05/15.
+ * Created by Mulet on 17/05/15.
  */
 public class UtilsRequest {
 private AddressResponse respAddress;
@@ -50,7 +50,7 @@ private AddressResponse respAddress;
     private static final String URL_TRIP = "?accio=registraViatge";
     private static final String URL_TRIPS = "?accio=registraViatges";
     private static final String URL_TRIPS_USER = "?accio=donarViatgesUsuari";
-    public static final String PREFERENCES_USER = "user_prefs";
+
 
     public static final String PROPERTY_SESSION_USER = "user";
     public static final String PROPERTY_SESSION_KEY = "key";
@@ -74,10 +74,7 @@ private AddressResponse respAddress;
     public static final String PARAMS_COMENTS = "coments";
     public static final String PARAMS_PASSENGERS = "passengers";
     public static final String PARAMS_TIME = "time";
-    public static final String PARAMS_DATE = "date";
-    public static final String PARAMS_HOUR = "hour";
-    public static final String PARAMS_KMS = "kms";
-    public static final String PARAMS_PRICE = "price";
+
 
     private static final String JSONARRAY_CITIES = "cities";
 
@@ -147,29 +144,7 @@ private AddressResponse respAddress;
                     e.printStackTrace();
                 }
                 int succes = -1;
-/*
 
-                String respon ="";
-                try {
-                    succes = response.getInt("success");
-                    if(succes==1) {
-
-                        SharedPreferences prefs = context.getSharedPreferences(
-                                PREFERENCES_USER,
-                                Context.MODE_PRIVATE);
-                        SharedPreferences.Editor editor = prefs.edit();
-                        editor.putString(PROPERTY_REG_USER, usser.getUser());
-                        editor.putString(PROPERTY_REG_PASSWORD, usser.getPassword());
-                        editor.commit();
-
-                    }
-
-
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                    Log.e("JSON ","error "+e);
-                }
-*/
                 Log.i("JSON ", "success="+succes);
                 if(succes == 1){
                     Toast.makeText(context, "Guardat correctament", Toast.LENGTH_LONG).show();
@@ -188,8 +163,7 @@ private AddressResponse respAddress;
                 Toast.makeText(context,response.toString(),Toast.LENGTH_LONG).show();
             }
         });
-        //mRequestQueue.getInstance().addToRequestQueue(jsObjRequest);
-        //mRequestQueue =  Volley.newRequestQueue(context);
+
         mRequestQueue.add(jsObjRequest);
 
     }
@@ -232,8 +206,7 @@ private AddressResponse respAddress;
                     Toast.makeText(context,response.toString(),Toast.LENGTH_LONG).show();
                 }
             });
-            //mRequestQueue.getInstance().addToRequestQueue(jsObjRequest);
-            //mRequestQueue =  Volley.newRequestQueue(context);
+
             mRequestQueue.add(jsObjRequest);
     }
 
@@ -245,21 +218,7 @@ private AddressResponse respAddress;
         HashMap<String, String> params = putKey();
 
                 trip.prepareParameters(params);
-        //new HashMap<>();
-       /* params.put(PARAMS_STREET_FROM, trip.getFrom().getStreets_name());
-        params.put(PARAMS_CITY_FROM, trip.getFrom().getCity());
-        params.put(PARAMS_LAT_FROM, ""+trip.getFrom().getCoordenates().latitude);
-        params.put(PARAMS_LNG_FROM, ""+trip.getFrom().getCoordenates().longitude);
-        params.put(PARAMS_STREET_TO, trip.getTo().getStreets_name());
-        params.put(PARAMS_CITY_TO, trip.getTo().getCity());
-        params.put(PARAMS_LAT_TO, ""+trip.getTo().getCoordenates().latitude);
-        params.put(PARAMS_LNG_TO, ""+trip.getTo().getCoordenates().longitude);
-        params.put(PARAMS_COMENTS, trip.getComents());
-        params.put(PARAMS_PASSENGERS, ""+trip.getPassengers());
-        params.put(PARAMS_DATE,trip.getDate().toString());
-        params.put(PARAMS_HOUR, trip.getHour());
-        //params.put(PARAMS_KMS, ""+trip.getKms());
-        //params.put(PARAMS_PRICE, ""+trip.getPrice());*/
+
 
 
         Log.i("PARAMStrip","size()="+params.size());
@@ -312,29 +271,13 @@ private AddressResponse respAddress;
             }
         });
         //mRequestQueue.getInstance().addToRequestQueue(jsObjRequest);
-        mRequestQueue =  Volley.newRequestQueue(context);
+       // mRequestQueue =  Volley.newRequestQueue(context);
         mRequestQueue.add(jsObjRequest);
 
     }
 
     public void sendTripData(TripEntity trip_go, TripEntity trip_back){
-        // Mapeo de los pares clave-valor
-       // HashMap<String, String> params = trip.prepareParameters();
-        //new HashMap<>();
-       /* params.put(PARAMS_STREET_FROM, trip.getFrom().getStreets_name());
-        params.put(PARAMS_CITY_FROM, trip.getFrom().getCity());
-        params.put(PARAMS_LAT_FROM, ""+trip.getFrom().getCoordenates().latitude);
-        params.put(PARAMS_LNG_FROM, ""+trip.getFrom().getCoordenates().longitude);
-        params.put(PARAMS_STREET_TO, trip.getTo().getStreets_name());
-        params.put(PARAMS_CITY_TO, trip.getTo().getCity());
-        params.put(PARAMS_LAT_TO, ""+trip.getTo().getCoordenates().latitude);
-        params.put(PARAMS_LNG_TO, ""+trip.getTo().getCoordenates().longitude);
-        params.put(PARAMS_COMENTS, trip.getComents());
-        params.put(PARAMS_PASSENGERS, ""+trip.getPassengers());
-        params.put(PARAMS_DATE,trip.getDate().toString());
-        params.put(PARAMS_HOUR, trip.getHour());
-        //params.put(PARAMS_KMS, ""+trip.getKms());
-        //params.put(PARAMS_PRICE, ""+trip.getPrice());*/
+
         HashMap<String,String> params = putKey();
 
         trip_go.prepareParameters("go", params);
@@ -385,7 +328,7 @@ private AddressResponse respAddress;
             }
         });
         //mRequestQueue.getInstance().addToRequestQueue(jsObjRequest);
-        mRequestQueue =  Volley.newRequestQueue(context);
+        //mRequestQueue =  Volley.newRequestQueue(context);
         mRequestQueue.add(jsObjRequest);
 
     }
@@ -469,7 +412,7 @@ private AddressResponse respAddress;
             }
         });
         //mRequestQueue.getInstance().addToRequestQueue(jsObjRequest);
-        mRequestQueue =  Volley.newRequestQueue(context);
+       // mRequestQueue =  Volley.newRequestQueue(context);
         mRequestQueue.add(jsObjRequest);
 
 
@@ -568,7 +511,7 @@ public void getAllCities(){
         }
     });
     //mRequestQueue.getInstance().addToRequestQueue(jsObjRequest);
-    mRequestQueue =  Volley.newRequestQueue(context);
+    //mRequestQueue =  Volley.newRequestQueue(context);
     mRequestQueue.add(jsObjRequest);
 
 }
@@ -602,7 +545,7 @@ public void getAllCities(){
             }
         });
         //mRequestQueue.getInstance().addToRequestQueue(jsObjRequest);
-        mRequestQueue = Volley.newRequestQueue(context);
+        //mRequestQueue = Volley.newRequestQueue(context);
         mRequestQueue.add(jsObjRequest);
 
 
@@ -644,7 +587,7 @@ public void getAllCities(){
             }
         });
         //mRequestQueue.getInstance().addToRequestQueue(jsObjRequest);
-        mRequestQueue = Volley.newRequestQueue(context);
+        //mRequestQueue = Volley.newRequestQueue(context);
         mRequestQueue.add(jsObjRequest);
 
 
@@ -745,8 +688,8 @@ public void getAllCities(){
                 Log.d("Response: ", response.toString());
             }
         });
-        //mRequestQueue.getInstance().addToRequestQueue(jsObjRequest);
-        mRequestQueue = Volley.newRequestQueue(context);
+
+        //mRequestQueue = Volley.newRequestQueue(context);
         mRequestQueue.add(jsObjRequest);
 
 

@@ -16,8 +16,8 @@ import enguix.mulet.taxivalldigna.R;
  * A simple {@link Fragment} subclass.
  */
 public class ReserveNowFragment extends Fragment {
-    Button now;
-    Button reserve;
+    private Button now;
+    private Button reserve;
 
     FragmentNowReserveListener mListener;
     public ReserveNowFragment() {
